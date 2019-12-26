@@ -20,6 +20,6 @@
     "webpack-merge": "^4.2.1"
   },
   "dependencies": {
-    "@tensorflow/tfjs": "^0.15.3"
+    "@tensorflow/tfjs": "^1.5.1"
   }
 }
