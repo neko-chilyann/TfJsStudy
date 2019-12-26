@@ -19,7 +19,7 @@ export default class LinerRegression extends Component {
     public async componentDidMount() {
         // 训练数据集
         const xs = [1, 2, 3, 4, 5, 6];
-        const ys = [2, 4, 6, 8, 10, 12];
+        const ys = [4, 8, 12, 16, 20, 24];
         // 绘制散点图
         tfVis.render.scatterplot(
             // 名称
@@ -27,7 +27,7 @@ export default class LinerRegression extends Component {
             // 数据
             { values: xs.map((x, i) => ({ x, y: ys[i] })) },
             // 范围
-            { xAxisDomain: [0, 7], yAxisDomain: [0, 13] }
+            { xAxisDomain: [0, 7], yAxisDomain: [0, 25] }
         );
         // 初始化模型
         const model = tf.sequential(); // sequential连续的模型
