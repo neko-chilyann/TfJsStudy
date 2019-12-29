@@ -113,8 +113,8 @@ export default class LogisticRegression extends Component<any, any> {
      */
     public render() {
         return <div className="logistic-regression">
-            <input type="text" value={this.state.x} onChange={(e: any) => this.change('x', e)}/>
-            <input type="text" value={this.state.y} onChange={(e: any) => this.change('y', e)}/>
+            x轴坐标：<input type="text" value={this.state.x} onChange={(e: any) => this.change('x', e)}/><br/>
+            y轴坐标：<input type="text" value={this.state.y} onChange={(e: any) => this.change('y', e)}/><br/>
             <button onClick={() => this.btnClick()}>预测</button>
         </div>;
     }

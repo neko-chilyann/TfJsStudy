@@ -72,7 +72,7 @@ export default class Xor extends Component<any, any> {
         this.model.add(tf.layers.dense({ units: 4, inputShape: [2], activation: 'relu' }));
         // 添加输出层
         this.model.add(tf.layers.dense({ units: 1, activation: 'sigmoid' }));
-        // 损失函数、优化器
+        // 对数损失函数、优化器
         this.model.compile({ loss: tf.losses.logLoss, optimizer: tf.train.adam(0.1) });
         // 训练
         await this.model.fit(inputs, labels, {
@@ -115,8 +115,8 @@ export default class Xor extends Component<any, any> {
      */
     public render() {
         return <div className="logistic-regression">
-            <input type="text" value={this.state.x} onChange={(e: any) => this.change('x', e)} />
-            <input type="text" value={this.state.y} onChange={(e: any) => this.change('y', e)} />
+            x轴坐标：<input type="text" value={this.state.x} onChange={(e: any) => this.change('x', e)} />
+            y轴坐标：<input type="text" value={this.state.y} onChange={(e: any) => this.change('y', e)} />
             <button onClick={() => this.btnClick()}>预测</button>
         </div>;
     }

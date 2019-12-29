@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import LinerRegression from '../liner-regerssion/LinerRegerssion';
 import LogisticRegression from '../logistic-regression/logistic-regression';
 import Xor from '../xor/xor';
+import Iris from '../iris/iris';
 
 export default class App extends Component {
 
@@ -12,7 +13,7 @@ export default class App extends Component {
      * @memberof App
      */
     public render() {
-        const type: string = 'Xor';
+        const type: string = 'iris';
         let content: any;
         switch (type) {
             case 'LinerRegression':// 线性回归
@@ -24,6 +25,8 @@ export default class App extends Component {
             case 'Xor':// Xor
                 content = <Xor />;
                 break;
+            case 'iris':
+                content = <Iris/>
         }
         return (<div className="App">{content}</div>);
     }
